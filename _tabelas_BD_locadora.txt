@@ -1,0 +1,59 @@
+
+
+CREATE TABLE filmes(
+    codigo varchar(10) NOT NULL ,
+    titulo varchar(30),
+    locado boolean,
+    ano int,
+    duracao varchar(10),
+  
+    PRIMARY KEY(codigo)
+    
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE cd(
+	codigo varchar(10) NOT NULL,
+	titulo varchar(30),
+	locado boolean,
+	autor varchar(30),
+	numfaixas int ,
+
+	PRIMARY KEY(codigo)
+
+)DEFAULT CHARSET = utf8; 
+
+CREATE TABLE clientes(
+    nome varchar(30),
+    cpf varchar(15) NOT NULL,
+    endereco varchar(40),
+    telefone varchar(15),
+    PRIMARY KEY(cpf)
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE gerentes(
+	nome varchar(30),
+    cpf varchar(15) NOT NULL,
+    login varchar(30) NOT NULL,
+    senha varchar(20) NOT NULL,
+    PRIMARY KEY(cpf)
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE operadores(
+	nome varchar(30),
+    cpf varchar(15) NOT NULL,
+    login varchar(30) NOT NULL,
+    senha varchar(20) NOT NULL,
+    PRIMARY KEY(cpf)
+)DEFAULT CHARSET = utf8;
+
+
+create table locacao(
+	cpf varchar(15),
+    codigo varchar(10) NOT NULL,
+    dataEntrada Date,
+    dataDevolucao Date,
+   
+   PRIMARY KEY(codigo)
+)DEFAULT CHARSET = utf8;
+
+
